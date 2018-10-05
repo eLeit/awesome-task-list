@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Awesome Task List{% endblock %}
+{% block stylesheets %}
+<style>
+    h1 {
+        color: red;
+    }
+</style>
+{% endblock %}
+{% block body %}
+    <h1>Awesome Task List</h1>
+    <h2>Items ({{ listItems|length }})</h2>
+    <ul>
+        {% for listItem in listItems %}
+            <li>{{ listItem }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

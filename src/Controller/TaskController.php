@@ -2,15 +2,21 @@
 
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class TaskController
+class TaskController extends AbstractController
 {
     /**
      * @Route("/")
      */
     public function taskList() {
-        return new Response('Welcome to the Awesome Task List');
+        return $this->render('taskList/list.html.twig', [
+            'listItems' => [
+                'Do the thing that needs to be done',
+                'Do the other thing',
+                'Do the third thing'
+            ]
+        ]);
     }
 }
