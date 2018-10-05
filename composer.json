@@ -11,6 +11,7 @@
         "symfony/yaml": "*"
     },
     "require-dev": {
+        "sensio/framework-extra-bundle": "^5.2",
         "symfony/dotenv": "*",
         "symfony/web-server-bundle": "*"
     },
