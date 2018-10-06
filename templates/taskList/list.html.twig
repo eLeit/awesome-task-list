@@ -1,18 +1,19 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}Awesome Task List{% endblock %}
+
 {% block stylesheets %}
-<style>
-    h1 {
-        color: red;
-    }
-</style>
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
 {% endblock %}
+
 {% block body %}
-    <h1>Awesome Task List</h1>
-    <h2>Items ({{ listItems|length }})</h2>
-    <ul>
-        {% for listItem in listItems %}
-            <li>{{ listItem }}</li>
-        {% endfor %}
-    </ul>
+    <div id="awesome-task-app"></div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('build/app.js') }}"></script>
 {% endblock %}
